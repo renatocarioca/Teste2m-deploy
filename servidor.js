@@ -1,8 +1,10 @@
 var fs = require('fs');
 var express = require('express');
 var app = express();
- 
-var server = app.listen(8080, function () {
+// inserido pelo Renato
+const port =  process.env.PORT || 3000;
+
+var server = app.listen(port, function () {
   var porta = server.address().port;
   console.log("Servidor executando na xxxxporta %s", porta);
 });
